@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
+// Real-Life Patch Notes: one funny changelog line for a bug in real life, written to /output/entry.txt.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = `v4.0.1: fixed a bug where socks vanished from the dryer and respawned under the bed. Laundry physics are now deterministic.`;
-const outDir = '/output';
-fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, 'entry.txt'), entry);
+// The patch note, composed fresh for this bounty.
+const entry = "v3.7.2: fixed a bug where yawning in meetings triggered a chain reaction across the entire office.";
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
